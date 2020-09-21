@@ -1,88 +1,52 @@
-<html>
-	<head>
-		<title>sunken land</title>
-		<meta charset="UTF-8">
-		<script type="text/javascript">
-/**
- * Entweedle - Twine 2 Twee Export Story Format
- * 
- * Copyright (c) 2016 Michael McCollum
- * http://www.maximumverbosity.net/twine/Entweedle/
- *
- * This license applies exclusively to the Entweedle story format for Twine 2. No ownership of, nor
- * licensing restrictions on, the content within the generated story are stated or implied.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
- * associated documentation files (the "Software"), to deal in the Software without restriction,
- * including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
- * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
- * subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial
- * portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
- * LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
-window.onload=function(){if(typeof(window.Entweedle)=="undefined"){window.Entweedle={convert:function(){var output=window.document.getElementById("output");output.innerHTML=this.export();},export:function(){var buffer=[];var storyData=window.document.getElementsByTagName("tw-storydata");if(storyData){buffer.push(this.buildPassage("StoryTitle","",storyData[0].getAttribute("name")));}
-var userScript=window.document.getElementById("twine-user-script");if(userScript){buffer.push(this.buildPassage("UserScript","script",userScript.innerHTML));}
-var userStylesheet=window.document.getElementById("twine-user-stylesheet");if(userStylesheet){buffer.push(this.buildPassage("UserStylesheet","stylesheet",userStylesheet.innerHTML));}
-var passages=window.document.getElementsByTagName("tw-passagedata");for(var i=0;i<passages.length;++i){buffer.push(this.buildPassageFromElement(passages[i]));}
-return buffer.join('');},buildPassageFromElement:function(passage){var name=passage.getAttribute("name");if(!name){name="Untitled Passage";}
-var tags=passage.getAttribute("tags");var content=passage.textContent;return this.buildPassage(name,tags,content);},buildPassage:function(title,tags,content){var result=[];result.push(":: ",title);if(tags){result.push("[",tags,"]");}
-result.push("\r\n",this.scrub(content),"\r\n\r\n");return result.join('');},scrub:function(content){if(content){content=content.replace(/^::/gm," ::");content=content.replace(/\</gm,"&lt;");content=content.replace(/\>/gm,"&gt;");}
-return content;}}}
-window.Entweedle.convert();}		
-		</script>
-	</head>
-	<body>
-		<pre id="output">
-		
-		</pre>
-		<div id="storyData" style="display: none;">
-			<tw-storydata name="sunken land" startnode="1" creator="Twine" creator-version="2.3.5" ifid="48514317-6463-484E-B42D-61F36D471A54" zoom="1" format="Entweedle" format-version="1.0.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Plot smack sheet" tags="" position="12,8" size="100,100">/* A game about a diaspora person returning to an island with many traumatic memories. An unemployed college student with an English degree, the death of his twin brother haunts him, he barely remembers anything from childhood, feeling like a drone.
+:: StoryTitle
+sunken land
 
-His eccentric aunt passes away mysteriously after breaking contact with the family during his early teen years, without a reason as to why. His mother cannot attend the funeral due to an illness and he decides to go and meet up with a cousin, Luna, who he barely remembers, she claims the house is passed down to her and him. they spend their time cleaning up the house when he arrives so that he could finally sleep there before the funeral. He relearns his history and programming since his aunt was a software engineer and has some essays locked behind passwords.
+:: UserScript[script]
 
-The island are divided into two despite being one with two governments and there is a conspiracy that this one side of the island of mostly Black and Brown working class people are expected to fend for themselves during the next upcoming super storm. 
 
-He is supposed to leave and comeback after the funeral and everyone is up in the air on whether to evacuate or prepare.  He spends most of his days (the game takes about two weeks) reading documents on his aunt laptop and with occassional visits from Luna where they usually spend the day looking at objects  water plants and visiting food places.
+:: UserStylesheet[stylesheet]
 
-He then finds a mysterious plant that his aunt write about in her journal that never dies and he replanted it and has to water it every day to grow into something big and special. It is the plant that must be fed to the monster tht his twin brother has become, killing animals and hurting humans.
 
-Eventually he suspects he&#39;s being stalked as he digs deeper into his grandmother&#39;s PC contents. The police are watching after him, everyone knows the child who has died under the flood and the arrest of his aunt and they wanna know why he&#39;s back.
+:: Plot smack sheet
+/* A game about a diaspora person returning to an island with "selective amnesia" but actually because it was traumatizing and he forgot everything. A mediocre self taught programmer with a deadend english degree, the death of his twin brother haunts him, he barely remembers anything from childhood, feeling like a drone. 
 
-They suspect he&#39;s continuing murders on the island, as femicidos have been rising, but ofc obvs he&#39;s not the murderer, there&#39;s someone else out there, its his twin monstrous brother, and they want to tke him down.&#39;
+His eccentric cousin passes away mysteriously and he knows nothing about her since his aunt broke contact with the family during his early teen years, without a reason as to why. His mother cannot attend the funeral due to an illness and he decides to go and meet up with another cousin, Luna, who he barely remembers. she claims the house is passed down to him because the aunt favored, something that he doubts. they spend their time cleaning up the house when he arrives so that he could finally sleep there before the funeral. 
 
-The Alvarez family, stigmatized by the death of their youngest child and the murders that continued and are framed on the aunt has made her hide from the public eye. */</tw-passagedata><tw-passagedata pid="2" name="Intro" tags="" position="134,6" size="100,100">Epigraph
+The island is divided into two, with one main government, Saint Paulo is predominately Black and Brown working class people, Saint Maria is where most of the White/Bourgie had escaped. People at Saint Paulo suspect that they are expected to fend for themselves during the next upcoming super storm. 
 
-- [[author-&gt;day1intro]]</tw-passagedata><tw-passagedata pid="3" name="day1intro" tags="dayone" position="133,112" size="100,100">&lt;h1&gt;&lt;i&gt;Dawn&lt;/i&gt;&lt;/h1&gt;
+He is supposed to leave and comeback after the funeral and everyone is up in the air on whether to evacuate or stay and prepare.  He spends most of his days (the game takes about two weeks) reading documents on his cousin's laptop with occassional visits from Luna where they usually spend the day watering this one weird ass plant his cousin left behind at the greenhouse formally owned by his grandmother. They also spend time visiting food places.
 
-I look down at the rotting flower beds from the dormer window, breath in deep and push my hair back. Wooden boards moaning under my weight, 10 year old attic dust pluming in the air from when I &lt;u&gt;pulled off the curtains&lt;/u&gt; (like Luna told me to.) I cough and let the cool breeze caress my sweaty chin.
+He then finds that his cousin wrote in her journal that the plant never dies but remains a sapling due to a missing ingredient. It is the plant that must be fed to the monster tht his twin brother has become, killing animals and hurting humans. (you find this out in the journals, that his brother is a demon and a reason for all these chupacabra attacks yet no one wants to do anything about it. She is instead framed for a murder and "commits suicide".)
 
-In the midst of the garden is the Virgin Mary. La Morenita is no longer of grace, acid erosion graying her skin, like a skin eating disease, infected by Mother Nature’s processes tainted by man’s productivity. She gazes up at me and I say a prayer in the recesses of my mind, my lips part slightly at “amen”. 
+Eventually he suspects he's being stalked as he digs deeper into his cousin's PC contents. The police are watching after him, everyone knows the child who has died under the flood and the arrest of his aunt and they wanna know why he's back. 
 
-(Her headscarf is no longer blue, peeling and unveiling a luminescent white, as if revealing a new level of ascension, where all of her original self will molt and turn into a  bone licked clean.) Her pupils have worn off, her eyes a blank space but always knowing.  I close the windows, they groan and the click of the latch echoes through the silence. The stuffiness of the room thickens again.
+They suspect he's continuing murders on the island, as femicidos have been rising, but ofc obvs he's not the murderer, there's someone else out there, its his twin monstrous brother, and they want to tke him down. but then plot twist: its not his twin brother, but rther a murderer on the islnd and the brother is just folklorico.
 
-I came here to mourn someone I don’t know. Connected blood, veins filled with a liquid that is cold. Thin. It is foreign to me, yet here I am dusting and cleaning a room that I will only live in for a month.
+The Alvarez family, stigmatized by the death of their youngest child and the murders that continued and are framed on the aunt has made her hide from the public eye. */
 
-What makes it worse, this is my aunt’s room. The person that I’m wearing black itchy slacks and listening to funeral organs for. 
+:: Intro
+Epigraph
 
-Above the bed, with a broken bed frame and box held up with styrofoam blocks, is a cross.
+- [[author->day1intro]]
 
-I take it down and place it in the night table drawer, open the windows again, and lay down on the bed.
+:: day1intro[dayone]
+<h1><i>Dawn</i></h1>
 
-[[continue-&gt;day1intro2]]</tw-passagedata><tw-passagedata pid="4" name="Content Warning" tags="" position="14,115" size="100,100">&lt;i&gt;Sink&lt;/i&gt; is a mystery game with dark elements about imperialism, antiblackness and scapegoating. Please take care. The content of this game is not graphically described in extraneous detail nor drawn in an image. 
+I look down at the rotting flower beds from the dormer window, breath in deep and push my hair back. Wooden boards moaning under my weight, 10 year old attic dust pluming in the air from when I <u>pulled off the curtains</u> (like Luna told me to.) I cough and let the cool breeze caress my sweaty chin.
+
+In the midst of the garden is the Virgin Mary. She is no longer of grace, acid erosion graying her skin, like a skin eating disease, infected by Mother Nature’s processes tainted by man’s productivity. She gazes up at me and I say a prayer in the recesses of my mind, my lips part slightly at “amen”. (Her headscarf is no longer blue, peeling and unveiling a luminescent white, as if revealing a new level of ascension, where all of her original self will molt and turn into a  bone licked clean.) 
+
+Her pupils have worn off, her eyes [[a blank space->day1intro1]] but always knowing.
+
+:: Content Warning
+<i>Sink</i> is a mystery game with dark elements about imperialism, antiblackness and scapegoating. Please take care. The content of this game is not graphically described in extraneous detail nor drawn in an image. 
 
 
 - Antiblackness
 
 - femicide
 
-- death in a family
+- death in a family through possible suicide
 
 - depression, anxiety, existential ennui, and paranoia
 
@@ -95,14 +59,97 @@ I take it down and place it in the night table drawer, open the windows again, a
 - ghosts
 
 - natural disasters, specifically a hurricane and flooding is incoming
-</tw-passagedata><tw-passagedata pid="5" name="day1intro2" tags="" position="402,1" size="100,100">Luna: “Sleeping already? Had a rough night on the boat? Haven&#39;t been on one since I was five.”
 
-I wake up to the sound of my cousin’s voice and feel her weight at foot of the bed as she sits down on it. But my brain hasn’t really processed that she’s a blood relative. She also looks unrelated to the whole Alvarez bloodline, which accentuates this alienness. (Porcelain skin with blue veins coursing through her forearms. Her browns that transition to hazel when the bears its on them. But her hair has a tinge of red that my mother born Black to the bone came to the earth with.) I pull the blankets over myself as if I&#39;m naked beneath them, feeling she’s some stranger that came in uninvited for an open house only they know about. 
+- two animal deaths
+
+:: day1intro2
+Luna: “Sleeping already? Had a rough night on the boat?”
+
+I wake up to the sound of my other cousin’s voice and feel her weight at the foot of the bed as she sits down on it. But my brain hasn’t really processed that she’s a blood relative. (She explained her parentage, but I don't remember what it was. She's been displaced from the family, returned, and adopted the blood name that truly belonged to her.) She also looks unrelated to the whole Alvarez bloodline, which accentuates this alienness. (Porcelain skin with blue veins coursing through her forearms. Her brown eyes that transition to hazel when the sun bears its presence on them. But her hair has a tinge of red that my mother born Black to the bone came to the earth with and its continued on in the generations.) I pull the blankets over myself as if I'm naked beneath them, feeling she’s some stranger that came in uninvited for an open house only they know about. 
 
 Luna: “You weren’t this shy when we were kids.”
 
 I partially unveil my face to my eyes and realize how the blanket smells musty, looks yellowed with sun and stillness, many years of neglect has rendered it stiff with dust. 
 
+Luna: "Well, 20 years will do that. I've known you since you were this high." She levels her hand to the height of the mattress. I roll my eyes under the blanket because I've heard that at least 20 times (Underneath tight hugs with floral perfumed armpits and beard stubble rubbing against mine, building some static bolts of affection between our cheeks.) since [[I've gotten here.->day1intro3a]] 
+
+:: dayintro2a
+Luna: "No one told you to leave a whole course meal on the table."
+
+She laughs, smacks my foot and gets up from the bed. She turns, squints at something over me for just a moment, probably noticing the cross is gone from above me, then does this smile that reveals her upper incisors. 
+
+Luna: "I put it in the fridge when you went upstairs. Can't be wasting food cuz you're excited."
+
+Simon: "I wouldn't say excited..."
+
+Luna: "I know it's a lot to think about, Simon, but I'm not saying you're gonna handle it all alone."
+
+I mull over that sentence for a bit, but before I could say anything she talks about getting something else from the freezer and leaves the room, closing the door behind her, like it isn't hot enough already. 
+
+[[I follow her downstairs.->dayintroHouseA]]
+
+:: dayintro2b
+Luna: "What's wrong with it being there? Move it elsewhere and it will be cluttered."
+
+I look around, there's literally 4 locations you can place this vanity.  There's a computer (A supremely old one, an Apple desktop from when I was 10.) desk to the left of the bed, sheaved to the side where the window is. So I could open the window while working on my next throwaway novel draft. 
+
+There's a dresser on the right side, on top of it are a multitude of books and a tray of perfumes. 
+
+And that is all the furniture here. I can move the vanity elsewhere and I will do it when Luna leaves.
+
+Simon: "Is it weird if I say, I don't like waking up to see myself across the room at 4AM?"
+
+She throws the sheet back on. 
+
+Luna: "Man, if you're scared of a mirror at night, you haven't experienced the rest of what goes on here."
+
+Simon: "W-whaddya mean?"
+
+She laughs again, revealing her overbite, and [[closes the door->dayintroHouseA]] behind here. 
+
+
+<!---develop this more later--->
+
+:: dayintro2c
+Luna: "Whaddya mean what were we like as kids? Did you fall into a coma after you left this place? I swear the selective amnesia of you people."
+
+Wow, that was way more intense than it needed to be. But it's alway been a thing that's been brought up vaguely over the dinner table with my mother. Her and I, eating usually some defrosted chili we made for the week. 
+
+Her back aching from the platter holding at the bar. A dull strain in my eyes, pressure bump on my ass, from sitting for 10 hours straight sifting through lines of someone elses garbage dump CSS.
+
+The other Alvarez's don't like us or rather it's a dislike that comes from an untold truth: We left, we didn't say sorry, they can't accept the consequences as to why we did. Instead they constructed this paper mache of misfortunes and try to act like it's flawless. That there is [[nothing wrong here->dayintroc1]] on Saint Paulo.
+
+
+:: dayintroHouseA
+Luna had warned me that the house was in disarray before I came. That a month before our cousin passed (who is the half sister of Luna), Luna had come back home from an overseas internship to find Dolor,(Her name is Dolores, but she preferred the more gender neutral sounding, Dolor. Which made the name heavier and well, her fate.) sitting at her work desks with towers of packed belongings surrounding her. 
+
+The youngest out of four sisters, my aunt has a row of pictures of herself on one wall above the TV. My mother is the middle sibling. The two eldest have gone to the U.S. and never talked to us again. This is the only picture that is hanging. Dolor had missed her mother more than anything else, and apparently on her suicide note, she had quoted one of her mother's poems.
+
+All of the boxes surrounding us are filled with pictures and papers that Luna never specifies what exactly the ink holds.
+
+[[I decide to stay in the room a little longer.->dayintrolittelonger]]
+
+[[I go to the kitchen with Luna->dayintroHouseB]]
+
+[[I go outside to the yard->dayintroHouseByard]]
+
+:: dayintrolittelonger
+Double-click this passage to edit it.
+
+:: day1intro1
+ I close the windows, they groan and the click of the latch echoes through the silence. The stuffiness of the room thickens again.
+
+I came here to mourn someone I don’t know. Connected blood, veins filled with a liquid that is cold. Thin. It is foreign to me, yet here I am dusting and cleaning a room that I will only live in for a month.
+
+What makes it worse, this is my cousin’s room. The person that I’m wearing black itchy slacks and listening to funeral organs for. 
+
+Above the bed, with a broken bed frame and box held up with styrofoam blocks, is a cross.
+
+I take it down and place it in the night table drawer, open the windows again, and lay down on the bed.
+
+[[continue->day1intro2]]
+
+:: day1intro3a
 Last night, Luna and I had discussed over the dinner table (underneath a flickering lamp as lightning strikes above the island wires) that this house now belongs to me. 
 
 So I spent the night dusting my room to at least make it habitable and then sat on the bed, read articles on my phone, and stared out the window till the sun came up. There is much more to clean in this house. There’s just so much to do. I haven’t even accepted this massive gift yet. 
@@ -113,33 +160,77 @@ It isn’t big though, it’s quite quaint, but still the concept of actually ha
 
 What really will torment the recesses of my mind though, is the vast amount of land. (After all I was raised with traffic jams and pollutions of all senses.) 
 
-Luna gets up and then pulls a plastic sheet off the vanity across the bed. I sure don’t look friendly. I got dark lunas (Pun not intended) under my eyes and red branches in my sclera reaching across to the pupil. But she&#39;s also acting like she met me last Tuesday and not for the first time in a decade.
+Luna gets up and then pulls a plastic sheet off the vanity across the bed. I sure don’t look friendly. I got dark lunas (Pun not intended) under my eyes and red branches in my sclera reaching across to the pupil. But she's also acting like she met me last Tuesday and not for the first time in a decade.
 
 
-[[&quot;It’s not that I aint friendly, I’m just hangry&quot;-&gt;dayintro2a]]
+[[It’s not that I aint friendly, I’m just hangry->dayintro2a]]
 
-[[U[h, I should move that, wanna help?-&gt;dayintro2b]]
+[[Uh, I should move that, wanna help?->dayintro2b]]
 
-[[What were we like as kids?-&gt;dayintro2c]]
-</tw-passagedata><tw-passagedata pid="6" name="dayintro2a" tags="" position="536,117" size="100,100">Luna: &quot;No one told you to leave a whole course meal on the table last night.&quot;
+[[What were we like as kids?->dayintro2c]]
 
-She laughs, smacks my foot and gets up from the bed. She turns, squints at something over me for just a moment, noticing the cross is gone from above me, then does this smile that reveals her upper incisors. 
+:: dayintroHouseB
+Double-click this passage to edit it.
 
-Luna: &quot;I put it in the fridge when you went upstairs. Can&#39;t be wasting food cuz you&#39;re excited.&quot;
+:: dayintroHouseByard
+Double-click this passage to edit it.
 
-Simon: &quot;I wouldn&#39;t say excited...&quot;
+:: dayintroc1
+Simon: "I just don't remember, is it okay, to just not remember things? I can't remember what I ate for lunch yesterday."
 
-Luna: &quot;I know it&#39;s a lot to think about, Simon, but I&#39;m not saying you&#39;re gonna handle it all alone.&quot;
+Luna: "What did you eat for lunch?"
 
-I mull over that sentence for a bit, but before I could say anything she talks about getting something from the freezer and leaves the room, closing the door behind her, like it isn&#39;t hot enough already. 
+Simon: "Did you not hear what I said."
 
-[[I follow her downstairs.-&gt;dayintroHouse]]</tw-passagedata><tw-passagedata pid="7" name="dayintro2b" tags="" position="416,115" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="dayintro2c" tags="" position="304,113" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="9" name="dayintroHouse" tags="" position="403,307" size="100,100">her mother sitting at her work desks with towers of packed belongings surrounding her. 
+Luna: "Simon, you just ate lunch when you came off the boat."
 
-The youngest out of four sisters, my aunt has a row of pictures of herself on one wall above the TV. My mother is the middle sibling. The two eldest have gone to the U.S. and never talked to us again.
+Simon: "A...huge pancake?"
 
-All of the boxes surrounding us are filled with pictures and papers that Luna never specifies what exactly the ink holds.
+Luna: "Yes, it's the selective memory alright. Okay, I'm kidding. I will think of a story..."
 
-[[I decide to stay in the room a little longer.-&gt;dayintrolittelonger]]</tw-passagedata><tw-passagedata pid="10" name="dayintrolittelonger" tags="" position="404,413" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
-		</div>
-	</body>
-</html>
+She pauses, sits back on the foot of the bed. I get up, look through my bag for the boar bristle brush, make circles around the derooted coils of my hair. (I really didn't want to honestly. But I shaved my hair before I came here. Rubbed in a bit of autumn tinge. It felt like a rebirth to return home. Thought I might as well complete the look.)
+
+Luna: "You know grandma's house is all boarded up now right?"
+
+Simon: "The one with the green house?"
+
+Luna: "Yes, you remember that place at least. It was taken by the government."
+
+[[>>->dayintroc2]]
+
+
+:: dayintroc2
+Luna: "Hmm, I don't really like telling this one too much, we got into so much trouble."
+
+Yet, I don't feel the surge of pain that usually comes right up the belly when you remember something awful down deep in the memory well.
+
+Luna: "But I still laugh about it from time to time."
+
+There was a greenhouse, I remember that always, because who wouldn't? My grandmother was descended from farmers. (And the farmer generations before her were owned by Corsicans. Her father, when they got free, owned his own land, married another Corsican. And she says, that is why we have red hair. A colonial generational flow that always reminds us <!--- uh idk how accurate this history is, so do research on this lmao-->.)
+
+*some kind of transition*
+[[>>->dayintroc3]]
+
+
+
+:: dayintroc3
+<!--- make some kind of indication that this is the voice of Luna -->
+
+So I think we were about like. 8 years old. No wait, I always forget we're two years apart. Our aunt would always tell us not to go to the green house alone. Your twin brother, Samuel, wouldn't come with us. Because he always listened.
+
+We were always up to something. We could be building a new tower of Babel and no one would know until they started speaking new tongues they never heard in the middle of washing dishes.
+
+
+The green house was big. Before the storm came, it was glorious. Ropes and veins of plants all over, pots and pots of flowers in rows. My aunt was also fond of parrots and there were two cages hanging from the top, two birds in each, and [[they'd fly around->dayintroc4]] while you water the flowers.
+
+
+
+:: dayintroc4
+There was one in particular tht she loved a lot and spent a lot of money just to have her. This magnificent blue iguaca that had a cage all to herself. Apparently, it's illegal to own those, but my grandmother was raised rich off the wealth her father built off his land, having maids dress like a doll. Sometimes that entitlement continued on after her status decayed. (And this is why she never kept a husband either. She married three times and had 6 kids. Two of them died after breathing the on earth for 2 months.)
+
+So anyway, one day me and you decided to go to the greenhouse. Rather, one evening, when all the grownups had gone to bed, our bellies full of coquito without the rum. (But oh the decision we made that night, it would've been better to blame it on the rum and not out of our child mind, chaotic desires).
+
+You with the slingshot, me with a large tupperware container. You said you wanted to take Alma home for yourself. 
+
+
+
